@@ -1,0 +1,287 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a,
+nav a,
+div a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav a:hover,
+div a:hover {
+  color: #007bff;
+}
+
+/* Main Content Styles */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.profile-section {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+}
+
+.profile-image img {
+  max-width: 100%;
+  margin-top: 20px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.text-content,
+.additional-content {
+  margin-bottom: 2rem;
+}
+
+.video-section {
+  margin-bottom: 2rem;
+}
+
+.video-section iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: right;
+}
+
+.contact-icons a {
+  color: #333;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .profile-section {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .profile-image {
+    text-align: center;
+  }
+
+  .profile-image img {
+    max-width: 300px;
+  }
+}
+
+/* Page Styles */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.read-more-btn:hover,
+.read-more-btn a,
+.read-more-btn a:hover {
+  color: #007bff;
+}
+
+.read-more-btn .triangle {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #007bff;
+  margin-right: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn.active .triangle {
+  transform: rotate(90deg);
+}
+
+.read-more-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.title-item {
+  margin-bottom: 2rem;
+}
+
+.title-item h2 {
+  margin-bottom: 1rem;
+}
+
+.title-item .title-content {
+  margin-bottom: 1rem;
+}
+
+.title-item .read-more-wrapper {
+  margin-top: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2rem 0;
+}
+
+/* Bullet Point with Text Styles */
+.bullet-text {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.bullet-text .bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.bullet-text .text {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Quote Container Styles */
+.quote-container {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  position: relative;
+}
+
+.quote-container::before {
+  content: "\201C"; /* Unicode for left double quotation mark */
+  color: #007bff;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.quote-container p {
+  margin: 0 0 10px 10px;
+  font-style: italic;
+}
+
+.quote-container footer {
+  color: #777;
+  font-size: 0.9em;
+  font-style: normal;
+  text-align: right;
+}
+
+.quote-container cite {
+  font-style: italic;
+}
+
+/* Resume Page Styles */
+.resume-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resume-content p {
+  margin-bottom: 20px;
+}
+
+.pdf-container {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pdf-container iframe {
+  border: none;
+}
